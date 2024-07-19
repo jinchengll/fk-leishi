@@ -1,12 +1,13 @@
-import { createApp } from 'vue'
-import './style.css'
+import { createSSRApp } from 'vue'
+import uviewPlus from 'uview-plus'
+import 'virtual:svg-icons-register'
 import App from './App.vue'
-import { Popup  as TPopup,Swiper as TSwiper } from 'tdesign-mobile-vue';
-// 引入组件库的少量全局样式变量
-import 'tdesign-mobile-vue/es/style/index.css';
-import 'virtual:uno.css'
 
-const app = createApp(App);
-app.mount('#app')
-app.use(TPopup)
-app.use(TSwiper)
+export function createApp() {
+  const app = createSSRApp(App)
+
+  app.use(uviewPlus)
+  return {
+    app,
+  }
+}
