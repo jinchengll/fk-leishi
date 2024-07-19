@@ -4,7 +4,7 @@ import Frist from './components/frist.vue'
 import Frists from './components/frists.vue'
 import Animation from './components/animation.vue'
 import Animations from './components/animation1.vue'
-import {Particle} from './components/particle.js'
+import {Particle} from './components/Particle.js'
 const systemInfo = uni.getSystemInfoSync();
 const windowHeight = systemInfo.windowHeight;
 const windowWidth = systemInfo.windowWidth;
